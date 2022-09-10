@@ -17,7 +17,7 @@ void Start()
         {
             case 0: return; break;
             case 41: PositivNumbers(); break;
-            //case 43: SumNumber(); break;
+            case 43: IntersectionOfLines(); break;
             default: Console.WriteLine("error"); break;
         }
     }
@@ -75,3 +75,26 @@ PositivNumbers();
 //  значения b1, k1, b2 и k2 задаются пользователем.
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
+void IntersectionOfLines()
+{
+
+    Console.Clear();
+
+    Console.Write ("Enter A: ");
+    double b1 = Convert.ToInt32(Console.ReadLine());
+
+    Console.Write ("Enter B: ");
+    double b2 = Convert.ToInt32(Console.ReadLine());
+
+    Console.Write ("Enter C: ");
+    double k1 = Convert.ToInt32(Console.ReadLine());
+
+    Console.Write ("Enter D: ");
+    double k2 = Convert.ToInt32(Console.ReadLine());
+
+    double x = (-b2 + b1)/(-k1 + k2);
+    double y = k2 * x + b2;
+
+    Console.WriteLine($"The point of intersection of two straight lines: X {x}, Y {y} ");
+
+}
